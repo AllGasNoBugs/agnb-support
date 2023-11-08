@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGNB Support</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Lato', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: rgb(246,246,246);
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      min-height: calc(100vh - 96px);
+      background-size: cover;
+      padding: 48px;
+      overflow: hidden;
+    }
+    .support-form, .policies-links {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      justify-content: center;
+      align-content: flex-start;
+    }
+    .support-form-inputgroup {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .support-form-inputgroup > label,
+    .support-form-inputgroup > input,
+    .support-form-inputgroup > textarea,
+    .support-form-inputgroup > select {
+      width: 100%;
+    }
+    .support-form-inputgroup > label {
+      margin-bottom: 12px;
+    }
+    .support-form-inputgroup > input,
+    .support-form-inputgroup > textarea,
+    .support-form-inputgroup > select {
+      padding: 8px 4px;
+      margin-bottom: 24px;
+      border: none;
+      box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.25);
+    }
+    h1 {
+      font-size: 72px;
+      line-height: 1;
+      width: 100%;
+      text-align: center;
+    }
+    .policies-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .policies-links > h2 {
+      width: 100%;
+      text-align: center;
+    }
+    .policies-links-link {
+      position: relative;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .policies-links-link::after {
+      position: absolute;
+      display: flex;
+      right: -24px;
+      top: 2px;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      background-image: url(./right-arrow-icon.png);
+    }
+    @media screen and (max-width: 768px) {
+      .support-form, .policies-links {
+        width: 100%;
+        margin-bottom: 48px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Support + Policies</h1>
+
+    <div class="support-form">
+      <form>
+        <h2>Support</h2>
+        <p>Send us a note about the selected product and we'll get back with you in 2-3 business days.</p>
+
+        <div class="support-form-inputgroup">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="support-form-inputgroup">
+          <label for="specification">For which product?</label>
+          <select name="specification" id="specification">
+            <option value="minesweeper">Minesweeper Mobile 2023</option>
+          </select>
+        </div>
+
+        <div class="support-form-inputgroup">
+          <label for="message">Your Message</label>
+          <textarea rows="12" name="message" id="message"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="policies-links">
+      <h2>Privacy Policies</h2>
+      
+      <a href="minesweeper-policy.html" class="policies-links-link">Minesweeper Mobile 2023</a>
+    </div>
+  </main>
+</body>
+</html>
